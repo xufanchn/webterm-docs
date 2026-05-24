@@ -12,6 +12,7 @@ export default defineConfig({
 
   head: [
     ['link', { rel: 'icon', href: '/webterm-docs/favicon.svg' }],
+    ['style', {}, '.VPHero .image-container .VPImage { max-width: 360px !important; max-height: 360px !important; }'],
   ],
 
   themeConfig: {
