@@ -7,7 +7,7 @@ export default defineConfig({
   vite: {
     plugins: [groupIconVitePlugin()],
     ssr: {
-      noExternal: ['naive-ui'],
+      noExternal: ['naive-ui', 'vueuc', 'date-fns', 'evtd', 'vooks', 'css-render', '@css-render', 'seemly', 'vdirs', 'treemate', 'lodash', 'lodash-es', '@juggle/resize-observer', '@emotion'],
     },
   },
 
