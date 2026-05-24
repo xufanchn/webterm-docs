@@ -34,6 +34,7 @@ jobs:
           rm -rf posts/*
           mkdir -p posts
           cp blog-content/posts/*.md posts/
+          rm -rf blog-content
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
