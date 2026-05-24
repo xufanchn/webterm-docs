@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  base: '/blog-vitepress/',
+  base: '/webterm-docs/',
   outDir: 'dist',
 
   title: 'WebTerm',
@@ -11,7 +11,7 @@ export default defineConfig({
   lastUpdated: true,
 
   head: [
-    ['link', { rel: 'icon', href: '/blog-vitepress/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/webterm-docs/favicon.ico' }],
   ],
 
   themeConfig: {
@@ -67,7 +67,7 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/xufanchn/webterm/edit/main/docs/:path',
+      pattern: 'https://github.com/xufanchn/webterm-docs/edit/main/:path',
       text: '在 GitHub 上编辑此页',
     },
 
