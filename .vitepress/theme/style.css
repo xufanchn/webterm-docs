@@ -2,3 +2,22 @@
   max-width: 360px;
   max-height: 360px;
 }
+
+.VPFooter {
+  padding: 12px 0 !important;
+  font-size: 12px !important;
+}
+
+.VPFooter .message,
+.VPFooter .copyright {
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+}
+
+.VPHero {
+  padding-bottom: 16px !important;
+}
+
+.VPHome {
+  padding-bottom: 0 !important;
+}
