@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  base: '/blog-vitepress/',
+  base: (process.env.VERCEL || process.env.CF_PAGES) ? '/' : '/blog-vitepress/',
   outDir: 'dist',
 
   title: 'xf / blog',
@@ -11,7 +11,7 @@ export default defineConfig({
   lastUpdated: true,
 
   head: [
-    ['link', { rel: 'icon', href: '/blog-vitepress/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
   ],
 
   themeConfig: {
