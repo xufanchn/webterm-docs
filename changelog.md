@@ -1,5 +1,7 @@
 # 更新日志
 
+<!-- RELEASES_START -->
+
 ## v0.1.0 (2026-05-23)
 
 ### 首个正式版本
@@ -39,5 +41,7 @@
 - SQLite 数据存储
 
 ---
+
+<!-- RELEASES_END -->
 
 更多版本即将发布。查看 [GitHub Releases](https://github.com/xufanchn/webterm/releases) 获取最新版本。
