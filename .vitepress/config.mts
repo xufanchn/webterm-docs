@@ -1,35 +1,41 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  base: (process.env.VERCEL || process.env.CF_PAGES) ? '/' : '/blog-vitepress/',
+  base: '/blog-vitepress/',
   outDir: 'dist',
 
-  title: 'xf / blog',
-  description: '代码 · 运维 · 思考 —— 记录技术路上的点滴',
+  title: 'WebTerm',
+  description: '基于 Web 的 SSH/SFTP/数据库运维管理工具',
 
   lang: 'zh-CN',
   lastUpdated: true,
 
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/blog-vitepress/favicon.ico' }],
   ],
 
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
-      { text: '文章', link: '/posts/WebTerm介绍' },
-      { text: 'GitHub', link: 'https://github.com/xufanchn' },
+      { text: '使用指南', link: '/guide/' },
+      { text: '更新日志', link: '/changelog' },
+      { text: 'GitHub', link: 'https://github.com/xufanchn/webterm' },
     ],
 
-    sidebar: [
-      {
-        text: '文章列表',
-        items: [
-          { text: 'WebTerm —— 基于 Web 的运维管理工具', link: '/posts/WebTerm介绍' },
-          { text: '三个博客框架搭建记录', link: '/posts/博客搭建记录' },
-        ],
-      },
-    ],
+    sidebar: {
+      '/guide/': [
+        {
+          text: '使用指南',
+          items: [
+            { text: '快速开始', link: '/guide/' },
+            { text: '安装部署', link: '/guide/install' },
+            { text: 'SSH 终端', link: '/guide/ssh' },
+            { text: 'SFTP 文件管理', link: '/guide/sftp' },
+            { text: '数据库管理', link: '/guide/database' },
+          ],
+        },
+      ],
+    },
 
     search: {
       provider: 'local',
@@ -37,20 +43,13 @@ export default defineConfig({
         locales: {
           root: {
             translations: {
-              button: {
-                buttonText: '搜索',
-                buttonAriaLabel: '搜索',
-              },
+              button: { buttonText: '搜索', buttonAriaLabel: '搜索' },
               modal: {
                 noResultsText: '未找到相关结果',
                 displayDetails: '显示详情',
                 resetButtonTitle: '清空搜索',
                 backButtonTitle: '返回',
-                footer: {
-                  selectText: '选择',
-                  navigateText: '切换',
-                  closeText: '关闭',
-                },
+                footer: { selectText: '选择', navigateText: '切换', closeText: '关闭' },
               },
             },
           },
@@ -59,30 +58,22 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/xufanchn' },
+      { icon: 'github', link: 'https://github.com/xufanchn/webterm' },
     ],
 
     footer: {
-      message: 'Powered by VitePress',
+      message: '基于 MIT 许可发布',
       copyright: `版权所有 © ${new Date().getFullYear()} xufanchn`,
     },
 
     editLink: {
-      pattern: 'https://github.com/xufanchn/blog-vitepress/edit/main/:path',
+      pattern: 'https://github.com/xufanchn/webterm/edit/main/docs/:path',
       text: '在 GitHub 上编辑此页',
     },
 
     lastUpdatedText: '最后更新',
-
-    docFooter: {
-      prev: '上一篇',
-      next: '下一篇',
-    },
-
-    outline: {
-      label: '目录',
-    },
-
+    docFooter: { prev: '上一页', next: '下一页' },
+    outline: { label: '目录' },
     returnToTopLabel: '返回顶部',
     sidebarMenuLabel: '菜单',
     darkModeSwitchLabel: '主题切换',
