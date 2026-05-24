@@ -3,11 +3,10 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   base: '/blog-vitepress/',
 
-  title: 'WebTerm',
-  description: '基于 Web 的 SSH/SFTP/数据库运维管理工具',
+  title: "Xufan's Blog",
+  description: '代码 · 运维 · 思考 —— 记录技术路上的点滴',
 
   lang: 'zh-CN',
-
   lastUpdated: true,
 
   head: [
@@ -15,33 +14,17 @@ export default defineConfig({
   ],
 
   themeConfig: {
-    logo: '/blog-vitepress/logo.svg',
-
     nav: [
       { text: '首页', link: '/' },
-      { text: '安装', link: '/install' },
-      { text: '功能', link: '/features' },
-      {
-        text: '更多',
-        items: [
-          { text: 'GitHub', link: 'https://github.com/xufanchn/webterm' },
-          { text: '发布记录', link: 'https://github.com/xufanchn/webterm/releases' },
-        ],
-      },
+      { text: '文章', link: '/posts/webterm-intro' },
+      { text: 'GitHub', link: 'https://github.com/xufanchn' },
     ],
 
     sidebar: [
       {
-        text: '入门',
+        text: '文章列表',
         items: [
-          { text: '简介', link: '/' },
-          { text: '安装指南', link: '/install' },
-        ],
-      },
-      {
-        text: '功能',
-        items: [
-          { text: '功能概览', link: '/features' },
+          { text: 'WebTerm —— 基于 Web 的运维管理工具', link: '/posts/webterm-intro' },
         ],
       },
     ],
@@ -53,8 +36,8 @@ export default defineConfig({
           root: {
             translations: {
               button: {
-                buttonText: '搜索文档',
-                buttonAriaLabel: '搜索文档',
+                buttonText: '搜索',
+                buttonAriaLabel: '搜索',
               },
               modal: {
                 noResultsText: '未找到相关结果',
@@ -74,11 +57,11 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/xufanchn/webterm' },
+      { icon: 'github', link: 'https://github.com/xufanchn' },
     ],
 
     footer: {
-      message: '基于 MIT 许可发布',
+      message: 'Powered by VitePress',
       copyright: `版权所有 © ${new Date().getFullYear()} xufanchn`,
     },
 
@@ -90,18 +73,16 @@ export default defineConfig({
     lastUpdatedText: '最后更新',
 
     docFooter: {
-      prev: '上一页',
-      next: '下一页',
+      prev: '上一篇',
+      next: '下一篇',
     },
 
     outline: {
-      label: '本页目录',
+      label: '目录',
     },
 
     returnToTopLabel: '返回顶部',
     sidebarMenuLabel: '菜单',
-    darkModeSwitchLabel: '主题',
-    lightModeSwitchTitle: '切换到浅色模式',
-    darkModeSwitchTitle: '切换到深色模式',
+    darkModeSwitchLabel: '主题切换',
   },
 })
