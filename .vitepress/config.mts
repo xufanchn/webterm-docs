@@ -6,6 +6,9 @@ export default defineConfig({
 
   vite: {
     plugins: [groupIconVitePlugin()],
+    ssr: {
+      noExternal: ['naive-ui'],
+    },
   },
 
   title: 'xf / blog',
