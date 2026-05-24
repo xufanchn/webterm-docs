@@ -11,7 +11,7 @@ export default defineConfig({
   lastUpdated: true,
 
   head: [
-    ['link', { rel: 'icon', href: '/webterm-docs/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/webterm-docs/favicon.svg' }],
   ],
 
   themeConfig: {
