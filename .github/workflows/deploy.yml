@@ -3,8 +3,6 @@ name: Deploy VitePress site to Pages
 on:
   push:
     branches: [main]
-  schedule:
-    - cron: '*/15 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -20,20 +18,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout blog repo
+      - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Checkout blog-content
-        uses: actions/checkout@v4
-        with:
-          repository: xufanchn/blog-content
-          path: blog-content
-
-      - name: Sync posts from blog-content
-        run: |
-          rm -rf posts/*
-          mkdir -p posts
-          cp blog-content/posts/*.md posts/
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
