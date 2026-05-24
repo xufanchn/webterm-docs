@@ -16,7 +16,7 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
-      { text: '文章', link: '/posts/webterm-intro' },
+      { text: '文章', link: '/posts/WebTerm介绍' },
       { text: 'GitHub', link: 'https://github.com/xufanchn' },
     ],
 
@@ -24,7 +24,8 @@ export default defineConfig({
       {
         text: '文章列表',
         items: [
-          { text: 'WebTerm —— 基于 Web 的运维管理工具', link: '/posts/webterm-intro' },
+          { text: 'WebTerm —— 基于 Web 的运维管理工具', link: '/posts/WebTerm介绍' },
+          { text: '三个博客框架搭建记录', link: '/posts/博客搭建记录' },
         ],
       },
     ],

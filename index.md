@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: 阅读博客
-      link: /posts/webterm-intro
+      link: /posts/WebTerm介绍
     - theme: alt
       text: GitHub
       link: https://github.com/xufanchn
