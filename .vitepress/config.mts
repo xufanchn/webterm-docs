@@ -33,23 +33,6 @@ export default defineConfig({
     search: {
       provider: 'local',
       options: {
-        miniSearch: {
-          options: {
-            tokenize(text) {
-              const result = []
-              for (let i = 0; i < text.length; i++) {
-                const c = text[i]
-                if (c !== ' ' && c !== '\n' && c !== '\t') {
-                  result.push(c)
-                  if (i < text.length - 1) {
-                    result.push(c + text[i + 1])
-                  }
-                }
-              }
-              return result
-            },
-          },
-        },
         locales: {
           root: {
             translations: {
