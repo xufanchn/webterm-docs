@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   base: '/blog-vitepress/',
 
-  title: 'xf/blog',
+  title: 'xf / blog',
   description: '代码 · 运维 · 思考 —— 记录技术路上的点滴',
 
   lang: 'zh-CN',
