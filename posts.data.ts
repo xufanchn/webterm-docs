@@ -5,6 +5,10 @@ export default createContentLoader('posts/*.md', {
   transform(raw) {
     return raw
       .map(({ url, frontmatter }) => ({ url, frontmatter }))
-      .sort((a, b) => (b.frontmatter.date || '').localeCompare(a.frontmatter.date || ''))
+      .sort((a, b) => {
+        const da = new Date(a.frontmatter.date || 0).getTime()
+        const db = new Date(b.frontmatter.date || 0).getTime()
+        return db - da
+      })
   },
 })
