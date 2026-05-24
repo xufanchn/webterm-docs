@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: "WebTerm"
-  text: "基于 Web 的运维管理工具"
+  text: "基于 Web 的运维工具"
   tagline: SSH 终端 · SFTP 文件管理 · 数据库管理 —— 一切尽在浏览器
   image:
     src: /logo.svg

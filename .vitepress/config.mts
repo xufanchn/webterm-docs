@@ -5,7 +5,7 @@ export default defineConfig({
   outDir: 'dist',
 
   title: 'WebTerm',
-  description: '基于 Web 的 SSH/SFTP/数据库运维管理工具',
+  description: '基于 Web 的 SSH/SFTP/数据库运维工具',
 
   lang: 'zh-CN',
   lastUpdated: true,
