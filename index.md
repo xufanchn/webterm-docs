@@ -14,8 +14,18 @@ hero:
       link: https://github.com/xufanchn
 ---
 
+<script setup>
+import { data as posts } from './posts.data.ts'
+</script>
+
 ## 最新文章
 
-<!-- AUTO_LIST_START -->
+<div v-for="post in posts" :key="post.url">
+  <h3><a :href="post.url">{{ post.frontmatter.title }}</a></h3>
+  <p><em>{{ post.frontmatter.date }} · xufanchn</em></p>
+  <p>{{ post.frontmatter.description }}</p>
+  <p><a :href="post.url">阅读全文 →</a></p>
+  <hr>
+</div>
 
-<!-- AUTO_LIST_END -->
+*更多文章即将发布...*

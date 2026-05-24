@@ -35,24 +35,6 @@ jobs:
           rsync -a --delete blog-content/posts/ posts/
           rm -rf blog-content
 
-          # Generate blog post list for index.md
-          list=""
-          for f in $(ls -t posts/*.md); do
-            title=$(grep -m1 "^title:" "$f" | sed 's/^title: *//;s/^"//;s/"$//')
-            date=$(grep -m1 "^date:" "$f" | sed 's/^date: *//')
-            desc=$(grep -m1 "^description:" "$f" | sed 's/^description: *//;s/^"//;s/"$//')
-            slug=$(basename "$f" .md)
-            list="${list}### [${title}](/posts/${slug})\n\n"
-            list="${list}*${date} · xufanchn*\n\n"
-            list="${list}${desc}\n\n"
-            list="${list}[阅读全文 →](/posts/${slug})\n\n---\n\n"
-          done
-          awk -v list="$list" '
-            /<!-- AUTO_LIST_START -->/ { print; print ""; print list; in_list=1; next }
-            /<!-- AUTO_LIST_END -->/   { in_list=0 }
-            !in_list
-          ' index.md > index.tmp && mv index.tmp index.md
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
