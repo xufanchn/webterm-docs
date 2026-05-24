@@ -33,6 +33,24 @@ export default defineConfig({
     search: {
       provider: 'local',
       options: {
+        miniSearch: {
+          options: {
+            tokenize: (text, field) => {
+              // Chinese: split into bigrams for meaningful search
+              if (/[一-鿿]/.test(text)) {
+                const chars = text.replace(/[^一-鿿\w]/g, '').split('')
+                const tokens = []
+                for (let i = 0; i < chars.length; i++) {
+                  tokens.push(chars[i])
+                  if (i < chars.length - 1) tokens.push(chars[i] + chars[i + 1])
+                }
+                return tokens
+              }
+              // English: default word split
+              return text.split(/[\s,.\-!?]+/).filter(t => t.length > 1)
+            },
+          },
+        },
         locales: {
           root: {
             translations: {
