@@ -9,9 +9,7 @@
     "preview": "vitepress preview"
   },
   "dependencies": {
-    "vitepress": "^1.6.4",
-    "vitepress-plugin-group-icons": "^1.7.5",
-    "vitepress-theme-mild": "^0.10.0"
+    "vitepress": "^1.6.4"
   },
   "description": "",
   "main": "index.js",

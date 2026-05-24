@@ -1,15 +1,7 @@
 import { defineConfig } from 'vitepress'
-import { groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 
 export default defineConfig({
   base: '/blog-vitepress/',
-
-  vite: {
-    plugins: [groupIconVitePlugin()],
-    ssr: {
-      noExternal: ['naive-ui', 'vueuc', 'date-fns', 'evtd', 'vooks', 'css-render', '@css-render', 'seemly', 'vdirs', 'treemate', 'lodash', 'lodash-es', '@juggle/resize-observer', '@emotion'],
-    },
-  },
 
   title: 'xf / blog',
   description: '代码 · 运维 · 思考 —— 记录技术路上的点滴',
