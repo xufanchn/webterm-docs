@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  name: "Xufan's Blog"
+  name: 'X.F. Blog'
   text: "代码 · 运维 · 思考"
   tagline: 记录技术路上的点滴
   actions:
