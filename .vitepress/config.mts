@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   base: '/blog-vitepress/',
+  outDir: 'dist',
 
   title: 'xf / blog',
   description: '代码 · 运维 · 思考 —— 记录技术路上的点滴',
